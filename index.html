@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <section class="bg"></section>
+  <div class="card front">
+    <img src="images/card-logo.svg" alt="one big white circle and smaller circle with white border">
+    <div class="card-credentials">
+      <p id="card-number">0000 0000 0000 0000</p>
+      <div class="owner-info">
+        <p id="card-owner-name">FULL name</p>
+        <p id="card-expiration"><span id="month">00</span>/<span id="year">00</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card back">
+    <p id="card-cvc">000</p>
+  </div>
+  
+  <main>
+    <form action="" id="myForm" method="POST">
+      <div class="form-field">
+        <label for="name">Cardholder Name</label>
+        <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+        <p class="error"></p>
+      </div>
+      <div class="form-field">
+        <label for="number">Card number</label>
+        <input type="text" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+        <p class="error"></p>
+      </div>
+      <div class="form-field even-columns">
+        <div class="expiration">
+          <label for="Exp. date (MM/YY)">Exp. Date (MM/YY)</label>
+          <div class="even-columns reduced-gap">
+            <input type="text" name="expiration-month" id="expiration-month" placeholder="MM" maxlength="2">
+            <input type="text" name="expiration-year" id="expiration-year" placeholder="YY" maxlength="2">
+          </div>
+          <p class="error"></p>
+        </div>
+        <div class="cvc-field">
+          <label for="cvc">CVC</label>
+          <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" maxlength="3">
+          <p class="error"></p>
+        </div> 
+      </div>
+      <div class="form-field">
+        <button type="submit" class="button">Confirm</button>
+      </div>
+    </form>
+
+    <section class="completed" hidden>
+      <img src="images/icon-complete.svg" alt="">
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button type="button" class="button">Continue</button>
+    </section>
+
+  </main>
+
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/EmrePW">EmrePW</a>.
+  </footer> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
